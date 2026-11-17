@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How I work with AI — Jakub Biros</title>
+<meta name="description" content="Rules before AI, code checks, human approval and tests with planted errors.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How I work with AI — Jakub Biros">
+<meta property="og:description" content="Rules before AI, code checks, human approval and tests with planted errors.">
+<meta property="og:image" content="https://kubabiros595-png.github.io/portfolio/assets/og.png">
+<meta property="og:url" content="https://kubabiros595-png.github.io/portfolio/how-i-work.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5fbf'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EJB%3C/text%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Jakub Biros</a>
+<nav class="main" aria-label="Main"><a href="index.html#projects">Projects</a><a href="how-i-work.html">How I work with AI</a><a href="index.html#contact">Contact</a></nav>
+<button id="theme" type="button" aria-label="Switch colour theme">Dark mode</button>
+</div></header>
+<main id="content"><div class="wrap">
+<p class="kicker">Method</p><h1>How I work with AI</h1><p class="lead">I am not a developer. I build these projects with Claude: I define the problem, the rules and thresholds, what the AI may and may not do, and the expected answer for every test case. Then I run the tests, read the failures and decide on the fixes.</p><section class="principle"><h2>Rules decide before the AI is called</h2><p>Whether something is a problem is decided by code with fixed thresholds, so the same data always gives the same result and every decision can be explained.</p><ul><li><a href="projects/churn-risk-alert.html">Churn Risk Alert</a>: Accounts are scored with fixed rules and a saved reason for every point; the AI never decides who gets an alert.</li><li><a href="projects/pharma-implementation-case.html">Pharma Implementation Case</a>: Keyword rules flag possible adverse events independently of Claude. Either signal is enough, and the AI can add a safety flag but never remove one.</li><li><a href="projects/clinical-trials-monitor.html">Clinical Trials Monitor</a>: A rule filter decides what is in scope before any summary is written, so no tokens are spent on records that would be rejected.</li></ul></section><section class="principle"><h2>Code checks what the AI wrote</h2><p>The AI writes words. Code then checks them against the facts before a person sees anything.</p><ul><li><a href="projects/knowledge-assistant.html">Knowledge Assistant</a>: Every cited section must be one the search actually retrieved; one unknown source and the whole answer becomes “I don't know”.</li><li><a href="projects/integration-health-monitor.html">Integration Health Monitor</a>: Every number in a draft must come from the facts, and a draft containing a secret or key-like string is removed before saving.</li><li><a href="projects/pharma-implementation-case.html">Pharma Implementation Case</a>: The AI only returns the ID of an approved response; the draft is assembled in code, word for word, with its source and version.</li></ul></section><section class="principle"><h2>A person approves</h2><p>Nothing goes to a customer automatically. Drafts and alerts are saved as pending review, and approval means “ready to copy”.</p><ul><li><a href="projects/onboarding-tracker.html">Onboarding Tracker</a>: A review form shows waiting drafts with the result of the code checks; a draft that failed the checks can be approved only with a note.</li><li><a href="projects/churn-risk-alert.html">Churn Risk Alert</a>: A login-protected form lets a person set approved, edit or rejected with a note.</li><li><a href="projects/site-integration-monitor.html">Site Integration Monitor</a>: Client emails never mention monitoring or competitors, and a person approves every draft.</li></ul></section><section class="principle"><h2>Tests with deliberately planted errors</h2><p>A check that never fails proves nothing, so I plant known mistakes and make sure they are caught. I set expected answers before running the tests.</p><ul><li><a href="projects/clinical-trials-monitor.html">Clinical Trials Monitor</a>: Four “canaries”: real AI summaries with a wrong link, phase, status or a dosing instruction planted in them. All four were flagged.</li><li><a href="projects/onboarding-tracker.html">Onboarding Tracker</a>: Seven hand-written bad drafts, including one that calls a launch late when it is not. All seven were caught.</li><li><a href="projects/knowledge-assistant.html">Knowledge Assistant</a>: A fake AI reply citing a section the search had not found was replaced with “I don't know” and logged.</li></ul></section><section class="principle"><h2>Reading the output, because checks are not enough</h2><p>Several times every automated check passed and the output was still wrong. Those cases are documented, not hidden.</p><ul><li><a href="projects/onboarding-tracker.html">Onboarding Tracker</a>: In the first draft run every draft passed the code checks, but three were misleading when I read them. The fix changed both the brief and the checks.</li><li><a href="projects/site-integration-monitor.html">Site Integration Monitor</a>: Drafts passed the checks but thanked the client “for reaching out” about a problem they never reported. Reading them led to two new checks.</li></ul></section></div></main>
+<footer class="site"><div class="wrap">
+<p><a href="https://github.com/kubabiros595-png" rel="me">GitHub</a></p>
+<p>Every project here was built and tested on fictional or public data and has not been deployed. Built with AI assistance (Claude).</p>
+</div></footer>
+<script src="assets/app.js" defer></script>
+</body></html>

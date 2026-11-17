@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jakub Biros — Implementation &amp; Technical Customer Success portfolio</title>
+<meta name="description" content="Customer Success in B2B SaaS, moving into implementation and technical customer success. I design and test AI-assisted workflows where rules decide, code checks the AI and a person approves, with a long-term focus on AI implementation in pharma and healthcare.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jakub Biros — Implementation &amp; Technical Customer Success portfolio">
+<meta property="og:description" content="Customer Success in B2B SaaS, moving into implementation and technical customer success. I design and test AI-assisted workflows where rules decide, code checks the AI and a person approves, with a long-term focus on AI implementation in pharma and healthcare.">
+<meta property="og:image" content="https://kubabiros595-png.github.io/portfolio/assets/og.png">
+<meta property="og:url" content="https://kubabiros595-png.github.io/portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5fbf'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EJB%3C/text%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Jakub Biros</a>
+<nav class="main" aria-label="Main"><a href="index.html#projects">Projects</a><a href="how-i-work.html">How I work with AI</a><a href="index.html#contact">Contact</a></nav>
+<button id="theme" type="button" aria-label="Switch colour theme">Dark mode</button>
+</div></header>
+<main id="content"><div class="wrap">
+<p class="kicker">Implementation · Technical Customer Success · AI workflows</p><h1>Jakub Biros</h1><p class="lead">Customer Success in B2B SaaS, moving into implementation and technical customer success. I design and test AI-assisted workflows where rules decide, code checks the AI and a person approves, with a long-term focus on AI implementation in pharma and healthcare.</p><p class="banner"><strong>All projects were built and tested on fictional or public data and have not been deployed.</strong> I am not a developer: I build them with Claude and design the rules, checks and tests myself.</p><h2 id="projects">Featured projects</h2><div class="featured"><article class="card">
+<h3><a href="projects/pharma-implementation-case.html">Pharma Implementation Case</a></h3>
+<p class="muted small">Medical Information triage with a human in the loop</p>
+<p class="lbl">Problem</p><p>In a fictional pharma Medical Information team, whether an enquiry hides a possible adverse event depends on someone noticing it while reading.</p>
+<p class="lbl">Test result</p><p class="result">7 of 7 possible adverse events routed to Drug Safety in each of 3 test runs.</p>
+<ul class="tags"><li>n8n</li><li>Claude</li><li>Pharmacovigilance</li><li>Implementation docs</li></ul>
+<p class="links"><a href="projects/pharma-implementation-case.html">Case study →</a><a href="https://github.com/kubabiros595-png/pharma-implementation-case">Repository</a></p>
+</article><article class="card">
+<h3><a href="projects/integration-health-monitor.html">Integration Health Monitor</a></h3>
+<p class="muted small">Catching silent webhook failures</p>
+<p class="lbl">Problem</p><p>Integrations rarely fail loudly: a shop rotates a secret or changes a plugin, events stop arriving, and nothing errors on the receiving side.</p>
+<p class="lbl">Test result</p><p class="result">45 of 45 signed test requests handled as expected; 18 of 18 detector scenarios with 0 false alarms and 0 missed alerts.</p>
+<ul class="tags"><li>n8n</li><li>Webhooks</li><li>HMAC</li><li>Idempotency</li><li>Claude</li></ul>
+<p class="links"><a href="projects/integration-health-monitor.html">Case study →</a><a href="https://github.com/kubabiros595-png/integration-health-monitor">Repository</a></p>
+</article><article class="card">
+<h3><a href="projects/onboarding-tracker.html">Onboarding Tracker</a></h3>
+<p class="muted small">B2B implementation plans, risk flags and checked AI drafts</p>
+<p class="lbl">Problem</p><p>Implementations stall quietly between “contract signed” and “client sees value”, and status emails often repeat dates that are no longer true.</p>
+<p class="lbl">Test result</p><p class="result">44 of 44 rule checkpoints with 0 false and 0 missed flags; 7 of 7 planted bad drafts caught.</p>
+<ul class="tags"><li>n8n</li><li>Implementation</li><li>Time to first value</li><li>Claude</li></ul>
+<p class="links"><a href="projects/onboarding-tracker.html">Case study →</a><a href="https://github.com/kubabiros595-png/onboarding-tracker">Repository</a></p>
+</article></div><h2>More projects</h2><div class="grid"><article class="card">
+<h3><a href="projects/site-integration-monitor.html">Site Integration Monitor</a></h3>
+<p class="muted small">Early technical churn signals from public website code</p>
+<p class="lbl">Problem</p><p>A client's team can remove the vendor's script in a redesign or add a competitor's, and nobody tells the vendor until results drop.</p>
+<p class="lbl">Test result</p><p class="result">50 of 50 detection checkpoints (10 sites × 5 days), 0 missed, 0 false alarms.</p>
+<ul class="tags"><li>n8n</li><li>Web scripts</li><li>GTM</li><li>Claude</li></ul>
+<p class="links"><a href="projects/site-integration-monitor.html">Case study →</a><a href="https://github.com/kubabiros595-png/site-integration-monitor">Repository</a></p>
+</article><article class="card">
+<h3><a href="projects/clinical-trials-monitor.html">Clinical Trials Monitor</a></h3>
+<p class="muted small">Weekly research digest from ClinicalTrials.gov and PubMed</p>
+<p class="lbl">Problem</p><p>Checking two research databases by hand every week is slow, and in a medical context a wrong phase, trial number or advice-like sentence is a real risk.</p>
+<p class="lbl">Test result</p><p class="result">11 of 11 rule-filter decisions correct; 4 of 4 planted mistakes caught.</p>
+<ul class="tags"><li>n8n</li><li>Public APIs</li><li>Life sciences</li><li>Claude</li></ul>
+<p class="links"><a href="projects/clinical-trials-monitor.html">Case study →</a><a href="https://github.com/kubabiros595-png/clinical-trials-monitor">Repository</a></p>
+</article><article class="card">
+<h3><a href="projects/knowledge-assistant.html">Knowledge Assistant</a></h3>
+<p class="muted small">Documentation answers with cited sources</p>
+<p class="lbl">Problem</p><p>A confident wrong answer from an AI help assistant is worse than no answer, because the customer acts on it.</p>
+<p class="lbl">Test result</p><p class="result">10 of 10 answerable questions answered with a correct citation; 5 of 5 uncovered questions refused.</p>
+<ul class="tags"><li>n8n</li><li>Retrieval</li><li>Citations</li><li>Claude</li></ul>
+<p class="links"><a href="projects/knowledge-assistant.html">Case study →</a><a href="https://github.com/kubabiros595-png/knowledge-assistant">Repository</a></p>
+</article><article class="card">
+<h3><a href="projects/churn-risk-alert.html">Churn Risk Alert</a></h3>
+<p class="muted small">Daily account alerts with human review</p>
+<p class="lbl">Problem</p><p>Struggling accounts get noticed too late, while a daily alert that repeats every morning soon stops being read.</p>
+<p class="lbl">Test result</p><p class="result">38 of 38 edge cases with the correct score and alert decision; a second run right after the first created 0 new alerts.</p>
+<ul class="tags"><li>n8n</li><li>Customer Success</li><li>Scoring rules</li><li>Claude</li></ul>
+<p class="links"><a href="projects/churn-risk-alert.html">Case study →</a><a href="https://github.com/kubabiros595-png/churn-risk-alert">Repository</a></p>
+</article><article class="card">
+<h3><a href="projects/ticket-triage.html">Ticket Triage</a></h3>
+<p class="muted small">AI-assisted support triage with confirmed-only answers</p>
+<p class="lbl">Problem</p><p>Serious support problems can look minor, and a confident AI reply is risky if it isn't tied to confirmed product knowledge.</p>
+<p class="lbl">Test result</p><p class="result">On 30 unseen tickets: 30 of 30 categories correct and 0 wrongly marked as not needing a person.</p>
+<ul class="tags"><li>n8n</li><li>Support</li><li>Masking</li><li>Claude</li></ul>
+<p class="links"><a href="projects/ticket-triage.html">Case study →</a><a href="https://github.com/kubabiros595-png/ticket-triage">Repository</a></p>
+</article><article class="card">
+<h3><a href="projects/client-health-report.html">Client Health Report</a></h3>
+<p class="muted small">Weekly at-risk account review for a CS team</p>
+<p class="lbl">Problem</p><p>Checking adoption, usage, tickets, contact history and renewal dates for every account by hand is slow, and important signals get missed.</p>
+<p class="lbl">Test result</p><p class="result">No automated test set yet. One sample run on 24 fictional accounts found 6 high-risk and summarised the top 3.</p>
+<ul class="tags"><li>n8n</li><li>Customer Success</li><li>Risk scoring</li><li>Claude</li></ul>
+<p class="links"><a href="projects/client-health-report.html">Case study →</a><a href="https://github.com/kubabiros595-png/client-health-report">Repository</a></p>
+</article><article class="card">
+<h3><a href="projects/automation-ideas-tracker.html">Automation Ideas Tracker</a></h3>
+<p class="muted small">Ranking automation ideas by hours saved per day of effort</p>
+<p class="lbl">Problem</p><p>Automation ideas sit in chat threads, and the loudest one gets built first instead of the one that saves the most time per day of building effort.</p>
+<p class="lbl">Test result</p><p class="result">25 of 25 automated tests pass (11 formula, 14 SQL), run by GitHub Actions on every push.</p>
+<ul class="tags"><li>SQLite in the browser</li><li>SQL</li><li>Automated tests</li><li>No AI</li></ul>
+<p class="links"><a href="projects/automation-ideas-tracker.html">Case study →</a><a href="https://github.com/kubabiros595-png/automation-ideas-tracker">Repository</a></p>
+</article></div><h2 id="ai">How I work with AI</h2><p>Rules decide before the AI is called, code checks what the AI wrote, a person approves, and every project is tested with deliberately planted errors. <a href="how-i-work.html">See the method with examples →</a></p><h2 id="contact">Contact</h2><p><a href="https://github.com/kubabiros595-png" rel="me">GitHub</a></p></div></main>
+<footer class="site"><div class="wrap">
+<p><a href="https://github.com/kubabiros595-png" rel="me">GitHub</a></p>
+<p>Every project here was built and tested on fictional or public data and has not been deployed. Built with AI assistance (Claude).</p>
+</div></footer>
+<script src="assets/app.js" defer></script>
+</body></html>
